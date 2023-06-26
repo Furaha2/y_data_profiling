@@ -1,0 +1,5 @@
+pandas
+numpy
+ydata_profiling
+pandas_profiling
+openpyxl
