@@ -16,7 +16,7 @@ if data is not None:
         data1 = pd.read_excel(data)
     else:
         st.write("Unsupported file format, please upload excel or CSV format file")
-
+        data1=None
 
     ok = st.button("Generate Report")
 
