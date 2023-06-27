@@ -15,7 +15,7 @@ if data is not None:
     elif file_extension in ["xls","xlsx"]:
         data1 = pd.read_excel(data)
     else:
-        st.write("Error:Unsupported file format, please upload excel or CSV format file")
+        st.write("Error:Unsupported file format")
         data1=None
         
     if data1 is not None and not data1.empty:
@@ -27,4 +27,4 @@ if data is not None:
                 st.write("## Report")
                 st.components.v1.html(profile.to_html(), width=1000, height=1200, scrolling=True)    
     else:
-        st.write("The uploded file is empty or does't contain any valid columns")
+        st.write("Please upload excel or CSV format file")
