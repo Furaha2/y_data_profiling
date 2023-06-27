@@ -24,5 +24,5 @@ if data is not None:
         if ok:
             profile = ProfileReport(data1, title="Pandas Profiling Report")
             with st.spinner("Genrating Report...."):
-            st.write("## Report")
-            st.components.v1.html(profile.to_html(), width=1000, height=1200, scrolling=True)    
+                st.write("## Report")
+                st.components.v1.html(profile.to_html(), width=1000, height=1200, scrolling=True)    
