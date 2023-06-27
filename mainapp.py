@@ -18,10 +18,8 @@ if data is not None:
         st.write("Unsupported file format, please upload excel or CSV format file")
         data1=None
         
-    if data1 not None:
+    if data1 is not None and data1.empty:
         ok = st.button("Generate Report")
-    else:
-        st.write("")
         
     if ok:
         profile = ProfileReport(data1, title="Pandas Profiling Report")
