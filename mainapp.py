@@ -18,7 +18,7 @@ if data is not None:
         st.write("Error:Unsupported file format, please upload excel or CSV format file")
         data1=None
         
-    if data1 is not None and data1.empty:
+    if data1 is not None and not data1.empty:
         ok = st.button("Generate Report")
         
         if ok:
