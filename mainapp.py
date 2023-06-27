@@ -5,15 +5,17 @@ import streamlit as st
 from ydata_profiling import ProfileReport
 
 st.title("Welcome Data Profiling")
-data = st.file_uploader("Choose File")
+data = st.file_uploader("Choose File only csv/excel")
 
 if data is not None:
     file_extension = data.name.split(".")[-1].lower()
 
     if file_extension == "csv":
         data1 = pd.read_csv(data)
-    else:
+    elif file_extension in ["xls","xlsx"]:
         data1 = pd.read_excel(data)
+    else:
+        st.write("Unsupported file format, please upload excel or CSV format file")
 
 
     ok = st.button("Generate Report")
