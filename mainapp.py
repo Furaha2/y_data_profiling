@@ -17,13 +17,14 @@ if data is not None:
     else:
         st.write("Unsupported file format, please upload excel or CSV format file")
         data1=None
-
-    ok = st.button("Generate Report")
-
+        
+    if data1 not None:
+        ok = st.button("Generate Report")
+    else:
+        st.write("")
+        
     if ok:
         profile = ProfileReport(data1, title="Pandas Profiling Report")
         with st.spinner("Genrating Report...."):
             st.write("## Report")
             st.components.v1.html(profile.to_html(), width=1000, height=1200, scrolling=True)    
-            
-        
