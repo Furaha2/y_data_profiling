@@ -21,8 +21,8 @@ if data is not None:
     if data1 is not None and data1.empty:
         ok = st.button("Generate Report")
         
-    if ok:
-        profile = ProfileReport(data1, title="Pandas Profiling Report")
-        with st.spinner("Genrating Report...."):
+        if ok:
+            profile = ProfileReport(data1, title="Pandas Profiling Report")
+            with st.spinner("Genrating Report...."):
             st.write("## Report")
             st.components.v1.html(profile.to_html(), width=1000, height=1200, scrolling=True)    
