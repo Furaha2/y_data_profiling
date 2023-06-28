@@ -8,7 +8,7 @@ st.title("Welcome Data Profiling")
 data = st.file_uploader("Choose File (only .csv/.excel)")
 
 if data is not None:
-    file_extension = data.name.split('.')[-1]  # no need to lower since we are checking for exact string match
+    file_extension = data.name.split('.')[-1].lower()  # no need to lower since we are checking for exact string match
 
     if file_extension == "csv":
         data1 = pd.read_csv(data)
