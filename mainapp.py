@@ -23,7 +23,7 @@ if data is not None:
         
         if ok:
             profile = ProfileReport(data1, title="Pandas Profiling Report")
-            with st.spinner("Genrating Report....\nplease wait...."):
+            with st.spinner("Generating Report....\nplease wait...."):
                 st.write("## Report")
                 st.components.v1.html(profile.to_html(), width=1000, height=1200, scrolling=True)    
     else:
