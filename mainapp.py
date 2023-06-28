@@ -10,9 +10,9 @@ data = st.file_uploader("Choose File (only .csv/.excel)")
 if data is not None:
     file_extension = data.name.split('.')[-1]  # no need to lower since we are checking for exact string match
 
-    if file_extension == ".csv":
+    if file_extension == "csv":
         data1 = pd.read_csv(data)
-    elif file_extension in [".xls", ".xlsx"]:
+    elif file_extension in ["xls", "xlsx"]:
         data1 = pd.read_excel(data)
     else:
         st.write("Error: Unsupported file format.")
