@@ -18,7 +18,7 @@ if data is not None:
         st.write("Error: Unsupported file format.")
         data1 = None
 
-    if data1 is not None and not data1.Empty:   # check for empty dataframe instead of len(df) == 0
+    if data1 is not None and not data1.empty:   # check for empty dataframe instead of len(df) == 0
         st.write("\nData profiling report generated successfully\n")
         st.write("===========================================\n")
         ok = st.button("View Report")
